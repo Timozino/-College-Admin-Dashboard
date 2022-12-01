@@ -1,0 +1,17 @@
+{% extends 'student_template/base_template.html' %}
+
+{% block page_title %}
+    Your Lectures
+{% endblock page_title %}
+{% load static %}
+
+<div class = "container">
+    {% for x in video %}
+    <h3 class = "embed-responsive embed-responsive -16by9" controls = "controls">
+        <video class "video-fluid">
+            <source src = "{{ x.video.url}}"
+            type = "video/mp4"/>
+        </video>
+        {% endfor %}
+
+</div>
